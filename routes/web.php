@@ -17,5 +17,8 @@ Route::post('movies/add', 'MovieController@store');
 
 Route::get('actors/{id}', 'ActorController@show');
 
+Route::resource('genres', 'GenreController');
+Route::get('genres/test', 'GenreController@test');
+
 
 
