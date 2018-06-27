@@ -69,7 +69,7 @@ class GenreController extends Controller
      */
     public function update(Request $request, Genre $genre)
     {
-        //
+        
     }
 
     /**

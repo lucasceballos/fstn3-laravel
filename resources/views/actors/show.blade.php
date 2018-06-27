@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
+<body>    
+        @if (Auth::check())
+            <div>Usuario: {{ Auth::user()->name }}</div>
+        @endif
+            <div>Usuario Anonimo</div>
     <pre>
         {{ $actor->toJson() }}
     </pre>
