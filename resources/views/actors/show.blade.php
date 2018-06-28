@@ -7,10 +7,12 @@
     <title>Document</title>
 </head>
 <body>    
+    
         @if (Auth::check())
             <div>Usuario: {{ Auth::user()->name }}</div>
-        @endif
+        @else
             <div>Usuario Anonimo</div>
+        @endif
     <pre>
         {{ $actor->toJson() }}
     </pre>

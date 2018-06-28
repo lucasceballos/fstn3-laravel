@@ -12,9 +12,12 @@ class ActorController extends Controller
     {
         $actors = Actor::all();
 
+        return response()->json($actors);
+        /*
         return view('actors', [
             'actors' => $actors
         ]);
+        */
     }
 
 
@@ -22,10 +25,13 @@ class ActorController extends Controller
     {
         $actor = Actor::find($id);
         
+        return response()->json($actor);
 
+        /*
         return view('actors.show', [
             'actor' => $actor,
             'favoriteMovie' => $actor->favoriteMovie
         ]);
+        */
     }
 }
